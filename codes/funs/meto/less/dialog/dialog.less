@@ -1,0 +1,90 @@
+button::-moz-focus-inner {
+  border:0;
+  padding:0;
+  margin:0;
+}
+.easyDialog_wrapper {
+  min-width:320px;
+  _width:320px;
+  color:#444444;
+  .border-radius(5px);
+  .box-shadow(0 0 10px rgba(0,0,0,0.4));
+  display:none;
+  font-family:@baseFontYahei;
+  .easyDialog_content {
+	.border-radius(4px);
+    background:#ffffff;
+    border:1px solid #e5e5e5;
+  }
+  .easyDialog_title {
+    height:28px;
+    line-height:28px;
+    overflow:hidden;
+    color:#3d3d3d;
+    padding:0 10px;
+    font-size:14px;
+    font-weight: bold;
+    border-bottom:1px solid #e5e5e5;
+    background:#f7f7f7;
+	.border-top-radius(4px);
+  }
+  .close_btn {
+    color:#3d3d3d;
+    text-decoration:none;
+    float:right;
+    background:url('../images/close_btn.png') left top no-repeat;
+    width:10px;
+    height:10px;
+    margin-top:10px;
+  }
+  .easyDialog_text {
+    padding:20px 10px;
+    font-size:12px;
+    line-height:22px;
+  }
+  .easyDialog_footer {
+    padding:0 10px;
+    *zoom:1;
+  }
+  .easyDialog_footer:after {
+    content:'';
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    clear:both;
+  }
+  .btn_highlight {
+    border:1px solid;
+    .border-radius(2px);
+    cursor:pointer;
+    font-family:@baseFontYahei;
+    float:right;
+    font-size:12px;
+    padding:0 12px;
+    height:24px;
+    line-height:24px;
+    margin-bottom:10px;
+    background:#4787ed;
+    background:-webkit-gradient(linear,center bottom,center top,from(#4787ed),to(#4d90fe));
+    background:-moz-linear-gradient(90deg,#4787ed,#4d90fe);
+    border-color:#3079ed;
+    color:#ffffff;
+  }
+  .btn_normal {
+    border:1px solid;
+	.border-radius(2px);
+    cursor:pointer;
+	font-family:@baseFontYahei;
+    float:right;
+    font-size:12px;
+    padding:0 12px;
+    height:24px;
+    line-height:24px;
+    margin-bottom:10px;
+    margin-left:10px;
+    border-color:#c3c3c3;
+	#gradient>.vertical(#ececec, #f4f4f4);
+    color:#333333;
+  }
+}

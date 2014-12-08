@@ -1,0 +1,53 @@
+webstrom  编辑器注释快捷键 ctr+shift+/
+
+
+框架公用方法说明
+.clearfix() 	无 	清除浮动
+.tab-focus() 	无 	添加类似Webkit获得焦点的风格和类似Firefox的的外包线
+.center-block() 	无 	使用margin: auto把块级元素自动居中
+.ie7-inline-block() 	无 	添加规则的 display: inline-block 以支持IE7
+.size() 	@height: 5px, @width: 5px 	快速设置行高和行宽
+.square() 	@size: 5px 	基于.size() 设置正方形区域
+.opacity() 	@opacity: 100 	设置透明度的百分比 (比如 "50" 或 "75")
+表单
+混合 	参数 	用法
+.placeholder() 	@color: @placeholderText 	设置输入框中 placeholder 的字体颜色
+排版
+混合 	参数 	用法
+#font > #family > .serif() 	无 	对某个元素应用一系列serif衬线字体
+#font > #family > .sans-serif() 	无 	对某个元素应用一系列sans-serif字体
+#font > #family > .monospace() 	无 	对某个元素应用一系列monospace字体
+#font > .shorthand() 	@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight 	方便设置字体大小，粗细和行间距
+#font > .serif() 	@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight 	设置衬线字体族serif，字体大小，粗细和行间距
+#font > .sans-serif() 	@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight 	设置sans-serif字体族，字体大小，粗细和行间距
+#font > .monospace() 	@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight 	设置monospace字体族，字体大小，粗细和行间距
+栅格系统
+混合 	参数 	用法
+.container-fixed() 	无 	创建一个水平居中的容器，用以容纳内容
+#grid > .core() 	@gridColumnWidth, @gridGutterWidth 	使用 n 列和 x 像素间距宽度，生成一个象素栅格系统(容器，行，列)
+#grid > .fluid() 	@fluidGridColumnWidth, @fluidGridGutterWidth 	使用 n 列和 x % 间距宽度，生成一个百分比栅格系统
+CSS3属性
+混合 	参数 	用法
+.border-radius() 	@radius: 5px 	元素圆角化，可以是一个单独的值，也可以分别是四个角的值
+.box-shadow() 	@shadow: 0 1px 3px rgba(0,0,0,.25) 	对元素应用阴影
+.transition() 	@transition 	添加CSS3过渡效果(比如， all .2s linear)
+.rotate() 	@degrees 	旋转一个元素 n 度
+.scale() 	@ratio 	对一个元素缩放原有大小的 n 倍
+.translate() 	@x: 0, @y: 0 	在平面上移动x和y个像素
+.background-clip() 	@clip 	裁剪一个元素的背景 (用于 border-radius)
+.background-size() 	@size 	通过CSS3更改背景图片的大小
+.box-sizing() 	@boxmodel 	改变一个元素的盒(box)模型 (比如，用在100%宽度 input 上的 border-box )
+.user-select() 	@select 	更改页面文本的选择光标
+.resizable() 	@direction: both 	改变右下角坐标以重置元素大小
+.content-columns() 	@columnCount, @columnGap: @gridColumnGutter 	让元素中的内容使用CSS3的列
+背景和渐变
+混合 	参数 	用法
+#translucent > .background() 	@color: @white, @alpha: 1 	设置一个元素的背景色和透明度
+#translucent > .border() 	@color: @white, @alpha: 1 	设置一个元素的边框的颜色和透明度
+#gradient > .vertical() 	@startColor, @endColor 	创建一个跨浏览器的垂直背景渐变
+#gradient > .horizontal() 	@startColor, @endColor 	创建一个跨浏览器的水平背景渐变
+#gradient > .directional() 	@startColor, @endColor, @deg 	创建一个跨浏览器的有斜度的背景渐变
+#gradient > .vertical-three-colors() 	@startColor, @midColor, @colorStop, @endColor 	创建一个跨浏览器的三色背景渐变
+#gradient > .radial() 	@innerColor, @outerColor 	创建一个跨浏览器的放射背景渐变
+#gradient > .striped() 	@color, @angle 	创建一个跨浏览器的条纹背景渐变
+#gradientBar() 	@primaryColor, @secondaryColor 	用于给按钮指定渐变背景和浅暗的边框

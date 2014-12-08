@@ -1,0 +1,95 @@
+// ui列表
+// --------------------------------
+@import "code/variables.less"; 
+@import "code/mixins.less";
+.meto-ui{
+	font-family: @baseFontYahei;
+	width:1000px;
+	margin:auto;
+	.title-bar{
+		height:20px;
+		line-height:20px;
+		position:relative;
+		.s-ico{
+			font-weight:lighter;
+			margin-right:5px;
+		}
+		.more{
+			position:absolute;
+			right:5px;
+			top:0px;
+			input.btn-small{
+				padding:1px 8px;
+			}
+		}
+	}
+	.s-nav{
+		padding: 5px 0;
+		ul{
+			height:65px;
+			li{
+				display: inline;
+				float: left;
+				padding: 0 5px;
+				text-align: center;
+				width: 83px;
+				a{
+					border: 1px solid #F5F5F5;
+					.transition(all .3s ease 0s);
+					color: #333333;
+					display: inline-block;
+					margin: 0 5px;
+					padding: 0 10px;
+					position: relative;
+					span{
+						margin: 5px auto;
+						display: block;
+						font-size:28px;
+						text-align:center;
+						height:32px;
+						overflow:hidden;
+						cursor:pointer;
+						width:32px;
+					}
+					em{
+						display:block;
+						margin-bottom:5px;
+					}
+					&:hover{
+						.box-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+						text-decoration:none;
+						span{
+							font-size:30px;
+						}
+					}
+					&:active{
+						.box-shadow(0 0 10px rgba(0, 0, 0, 0.5) inset);
+					}
+				}
+				&.active{
+					a{
+						background:#2F549F;
+						span,em{
+							color:#ffffff;
+						}
+						&:hover{
+							background:#3c69c5;
+						}
+					}
+				}
+			}
+		}
+	}
+	.s-tabs{
+		padding:10px;
+		border:1px solid #F5F5F5;
+		height:200px;
+		overflow:hidden;
+		.sTab{
+			display:none;
+			&.active{
+				display:block;
+			}
+		}
+	}
+}

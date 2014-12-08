@@ -1,0 +1,60 @@
+.ui-article{
+	strong{
+		font-weight:bold;
+		color:#000;
+	}
+	.hd{
+		z-index:11;
+		border-bottom:1px dotted #dbdbdb;
+		padding-bottom:2px;
+		h1{
+			font-family: @baseFontYahei;
+			font-size: 22px;
+			font-weight: lighter;
+			padding-bottom: 15px;
+		}
+		.ui-titBar{
+			span{
+				padding-right:2px;
+				&.ui-titTag{
+					border-right:1px solid #eee;
+					padding-right:5px;
+				}
+				&.ui-titTime{
+					color:#999;
+				}
+				&.ui-titMore{
+					.ui-comment{
+						display:block;
+						i{
+							.square(22px);
+							line-height:22px;
+							color:#fff;
+							background:#399cea;
+							.center-inline();
+							text-align:center;
+						}
+						em{
+							.center-inline();
+							background:#ebf5fd;
+							padding:0 5px;
+							color:#506fa5;
+						}
+					}
+				}
+			}
+		}
+	}
+	.bd{
+		.ui-contentTl{
+			background:#f3f3f3;
+			padding:5px;
+		}
+		.ui-contentBd{
+			p{
+				line-height:28px;
+				padding-bottom:5px;
+			}
+		}
+	}
+}

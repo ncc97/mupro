@@ -1,0 +1,22 @@
+.ui-tablist{
+	li{
+		a{
+			border-bottom:1px dashed #dddddd;
+			height:32px;
+			line-height:32px;
+			position:relative;
+			.transition(height 0.2s linear 0s);
+			overflow:hidden;
+			display:block;
+		}
+		.detail{
+			height:70px;
+			line-height:20px;
+		}
+		&.active{
+			a{
+				height:96px;
+			}
+		}
+	}
+}

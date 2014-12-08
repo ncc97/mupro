@@ -1,0 +1,18 @@
+.main {
+  width: 960px;
+  margin: auto;
+}
+.main .v-search-box .v-search {
+  padding: 0 0 5px 0;
+}
+.main .v-search-box select,
+.main .v-search-box input[type="file"] {
+  height: 24px;
+  line-height: 24px;
+  padding: 2px 6px;
+}
+.main .v-search-box .ui-table th,
+.main .v-search-box .ui-table td {
+  padding: 4px;
+  text-align: center;
+}

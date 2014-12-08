@@ -1,0 +1,106 @@
+// 网站流行ue主边栏
+.ui-asideMenu{
+	position:relative;
+	width:240px;
+	z-index:20;
+	border-top:2px solid #000;
+	*border-right:1px solid #E6E6E6;
+	_border-right:1px solid #E6E6E6;
+	.ui-aside{
+		position:relative;
+		width:240px;
+		border-bottom:1px solid #e6e6e6;
+		.item-Menu{
+			border-left:1px solid #e6e6e6;
+			padding:8px 0;
+			position:relative;
+			width:239px;
+			.item-hd{
+				h3{
+					height: 24px;
+					line-height: 24px;
+					position: relative;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					i{
+						height:24px;
+						line-height:24px;
+						.center-inline();
+						margin-right:5px;
+						.transition( .3s ease 0s);	
+					}
+				}
+			}
+			.item-hd{
+				padding:0 10px;
+				p{
+					height:20px;
+					line-height:20px;
+					padding:5px 0 0;
+					a{
+						padding-right:5px;
+					}
+				}
+			}
+			.ui-category{
+				position:absolute;
+				left:239px;
+				top:-2px;
+				width:0;
+				overflow:hidden;
+				z-index:22;
+				.transition(width .35s ease);
+				.sub-view{
+					width:239px;
+					background:#fff;
+					border:1px solid #e6e6e6;
+					border-left:none;
+					padding:5px;
+					.view-list{
+						.view-items{
+							dt{
+								font-size:14px;
+								font-weight:bold;
+							}
+							dd{
+								display:inline;
+								margin-right:5px;
+							}
+						}
+					}
+				}
+				.sub-view1{
+					border-top:2px solid #000;
+				}
+			}
+		}
+		.item-Menu2{
+			background:#f1f1f1;
+		}
+		.hover{
+			background:#88766e;
+			.item-hd,.item-bd{
+				color:#ffffff;
+				a,i,h3{
+					color:#ffffff;
+				}
+				i{
+					.rotate(45deg);
+				}
+			}
+			.ui-category{
+				width:240px;
+			}
+		}
+		.sideBar{
+			background:transparent none repeat scroll 0% 0%;
+			.box-shadow(3px 1px 4px rgba(0, 0, 0, 0.2));
+			position:absolute;
+			top:-1px;
+			right:0px;
+			width:5px;
+			z-index:18;
+			height:100%;
+		}
+	}
+}

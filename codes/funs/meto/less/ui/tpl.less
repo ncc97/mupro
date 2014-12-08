@@ -1,0 +1,800 @@
+/*!
+	tpl mods
+	ryan ni  zhaogang.com
+ */
+
+
+// 模板变量
+// -------------------------
+@navbg:            #000;
+
+/*
+ * @name: a链接自定义模块
+ * @overview: 一般链接样式
+ * @require: null;
+ */
+ 
+ //link模块一
+.m-link{
+	a{
+		color:@linkbase;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linkhover;
+			text-decoration:none;
+		}
+	}
+}
+
+//link模块二
+.m-linkA{
+	a{
+		color:#3d3d3d;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  #FF3300;
+			text-decoration:none;
+		}
+	}
+}
+
+//link模块二
+.m-linkB{
+	a{
+		color:#8B8B8B;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  #ff3300;
+		}
+	}
+}
+
+//link模块三
+.m-linkC{
+	a{
+		color:#333333;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linktmpahover;
+			text-decoration:none;						
+		}
+	}
+}
+
+ //link模块四
+.m-linkD{
+	a{
+		color:@linkbase;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linkhover;
+			text-decoration:none;
+		}
+	}
+}
+
+ //link模块五
+.m-linkE{
+	a{
+		color:@linkbase;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linktmpahover;
+			text-decoration:underline;
+		}
+	}
+}
+
+//link模块五
+.m-linkF{
+  a{
+    color:#ffffff;
+    .transition(all .3s ease 0s);
+    &:hover{
+      color: #ffffff;
+      .opacity(80);
+      text-decoration:none;
+    }
+  }
+}
+//link模块六
+.m-linkG{
+  a{
+    color:#176cee;
+    .transition(all .3s ease 0s);
+    &:hover{
+      color:#176cee;
+      .opacity(80);
+      text-decoration:none;
+    }
+  }
+}
+//link模块七
+.m-linkH{
+  a{
+    color:#666666;
+    .transition(all .3s ease 0s);
+    &:hover{
+      color:#666666;
+      .opacity(80);
+      text-decoration:underline;
+    }
+  }
+}
+/*
+ * @name: 翻转
+ * @overview: 内联class
+ * @require: null;	
+*/
+.ui-deg{
+	.transition( .3s ease 0s);			
+}
+.ui-deg30{
+	.ui-deg-icon{
+		display:block;
+		.transition( .3s ease 0s);				
+	}
+}
+.ui-deg30:hover{
+	.ui-deg-icon{
+		.rotate(-30deg);			
+	}
+}
+.ui-deg30A{
+	.ui-deg-icon{
+		display:block;
+		.transition( .3s ease 0s);				
+	}
+}
+.ui-deg30A:hover{
+	.ui-deg-icon{
+		.rotate(30deg);			
+	}
+}
+.ui-deg45{
+	.ui-deg-icon{
+		display:block;
+		.transition( .3s ease 0s);				
+	}
+}
+.ui-deg45:hover{
+	.ui-deg-icon{
+		.rotate(45deg);			
+	}
+}
+.ui-deg90{
+	.ui-deg-icon{
+		display:block;
+		.transition( .3s ease 0s);	
+		&:hover{
+			.rotate(90deg);
+		}				
+	}
+}
+.ui-deg180{
+	.ui-deg-icon{
+		display:block;
+		.transition( .3s ease 0s);				
+	}
+}
+.ui-deg180:hover{
+	.ui-deg-icon{
+		.rotate(180deg);			
+	}
+}
+.ui-deg360{
+	.ui-deg-icon{
+		display:block;
+		.transition( .3s ease 0s);	
+		&:hover{
+			.rotate(360deg);
+		}				
+	}
+}
+
+/*
+ * @name: css三角
+ * @overview: 内联class
+ * @require: null;	
+*/
+.ui-shape-river{
+	border-color: #666666 #F5F5F5 #F5F5F5;
+    border-style: solid;
+    border-width: 4px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
+}
+
+/*
+ *隐藏所有id包含元素 通配选择器
+*/
+[id^="ui-show"],[id*=" ui-show"]{
+	display:none;
+}
+
+/*
+ * @name: 列表
+ * @overview: 一般列表样式
+ * @require: null;
+ */
+ul{
+	&.ui-list{
+		.ui-list-item{
+			height: 24px;
+			line-height: 24px;
+			overflow: hidden;
+            padding: 0 5px;
+		}
+	}
+	&.ui-list-lines{
+		.ui-list-item{
+			float:left;
+			a{
+				padding-right:5px;
+			}
+		}
+	}
+}
+/*
+ * @name: 导航
+ * @overview: 一般导航
+ * @require: null
+ */  
+ul{
+	&.ui-nav{
+		.ui-nav-item{
+			background:@navbg;
+			position:relative;
+			float:left;
+			a{
+				color:@white;
+				display:block;
+				width:80px;
+				height:24px;
+				line-height:24px;
+				text-align:center;
+				&:hover{
+					text-decoration:none;
+				}
+			}
+			.ui-nav-item-child{
+				.opacity(0);
+				.transition(opacity .3s ease .2s);
+				position:absolute;
+				left:-9999px;
+				top:24px;
+				width:78px;
+				border:1px solid #ccc;
+				border-top:none;
+				background:@white;
+				
+				li{
+					height:24px;
+					line-height:24px;
+					text-align:center;
+				}
+			}
+		}
+		.hover{
+			.ui-nav-item-child{
+				left:0;
+				.opacity(100);
+			}
+		}
+	}
+}
+ 
+/*
+ * @name: 标题
+ * @overview: 有其他内容包含在内的标题
+ * @require: null;
+ */
+.ui-title{
+	text-align:center;
+	.ui-title-cnt{
+		color:@grayDarker;
+	}
+	.ui-title-subcnt{
+		color:@grayLight;
+	}
+}
+
+/*
+ * @name: 步骤
+ * @overview: 用户操作步骤
+ * @require: null
+ */
+ ol{
+	&.ui-step{
+		.ui-step-item{
+			float:left;
+			&.ui-step-item-first{
+			
+			}
+			&.ui-step-current{
+			
+			}
+		}
+		.ui-step-item-last{
+		
+		}
+	}
+ }
+ 
+ /*
+ * @name: 重复元素
+ * @overview: 重复出现的元素，我们通常用这种方法来写，这样也会方便JS操作
+ * @require: null
+ */
+.ui-repeater{
+	.ui-repeater-item{}
+	.ui-repeater-current{}
+}
+
+/*
+ * @name: 分页
+ * @overview: 页面分页
+ * @require: null
+ */
+.ui-page{
+	text-align:center;
+	a{
+		float:left;
+		border: 1px solid #B3B3B3;
+		.border-radius(2px);
+		display: inline-block;
+		height: 24px;
+		line-height: 24px;
+		margin: 0 2px;
+		padding: 0 7px;
+		text-align: center;
+		vertical-align: middle;
+		color:@grayDark;
+		&:hover{
+		    border-color: #bf0601;
+			color: #bf0601;
+			text-decoration: none;
+		}
+		&.ui-page-item-current{
+			background-color: #bf0601;
+			border: 1px solid #bf0601;
+			color: #FFFFFF;
+		}
+		&.ui-page-item-prev{
+			i{
+				font-family: Helvetica;	
+				padding-right:5px;
+			}
+		}
+		&.ui-page-next{
+			i{
+				font-family: Helvetica;	
+				padding-left:5px;
+			}
+		}
+	}
+	span{
+		&.ui-page-item{
+			float:left;
+			display: inline-block;
+			height: 24px;
+			line-height: 24px;
+			margin: 0 2px;
+			padding: 0 7px;
+			text-align: center;
+			vertical-align: middle;
+			color:@grayDark;
+		}
+		&.ui-page-item-info{
+			border: 1px solid #B3B3B3;
+			border-radius: 2px 2px 2px 2px;
+			color:#cccccc;
+		}
+	}
+	input[type="text"]{
+		float:left;
+		padding:3px;
+		width:18px;
+		margin-left:5px;
+	}
+}
+
+/* 
+ * @name: 表单项 
+ * @overview: 通用文本输入框
+ * @require: null
+ */
+ div{
+	//纵向表单项
+	&.ui-form-panel{
+		.ui-form-item{
+			padding:2px 0;
+			label{
+				margin-bottom:2px;
+				.ui-form-required{
+					color:@red;
+				}
+			}
+			.ui-tips{
+				display:block;
+				margin-bottom:2px;
+			}
+		}
+	}
+	//横向表单项
+	&.ui-form-cross{
+		.ui-form-item{
+			label{
+				display:inline-block;
+				.formColumns(3);
+				text-align:right;
+			}
+			.ui-input{
+				.formColumns(2);		//使用方法设置表单宽度 config的倍数
+			}
+			.ui-textarea{
+				.formColumns(8);
+			}
+			.ui-input-error {
+				border:1px solid @red;
+				&:focus{
+					.box-shadow(0 0 6px lighten(@red, 20%));
+				}
+			}
+			.ui-input-warning{
+				border:1px solid @orange;
+				&:focus{
+					.box-shadow(0 0 6px lighten(@orange, 20%));
+				}
+			}
+			.ui-input-success{
+				border:1px solid @green;
+				&:focus{
+					.box-shadow(0 0 6px lighten(@green, 20%));
+				}
+			}
+			.ui-form-explain{
+				display:inline-block;
+				&.warning{
+					color:@orange;
+				}
+				&.error{
+					color:@red;
+				}
+				&.success{
+					color:@green;
+				}
+			}
+		}
+	}
+	//自定义表单项
+	//------------
+	//自定义表单风格
+	&.ui-form-lbw{
+		width:600px;
+		.ui-form-item{
+			label{
+				.formColumns(3);
+			}
+			.ui-input{
+				padding:2px 4px;
+				.formColumns(4);		
+			}
+			.ui-textarea{
+				.formColumns(6);
+			}
+		}
+	}
+ }
+ 
+ /* 
+ * @name: tips 
+ * @overview: 淘宝网页tips
+ * @require: null
+ */
+ .ui-poptip{
+	margin:0;
+	padding: 0;
+	text-shadow: none; 
+	color:@poptip-color;
+	background:none;
+	border:none;
+	.ui-poptip-shadow{
+		background-color: @poptip-bg-sd;
+		.border-radius(2px);
+		float: left;
+		padding: 2px;
+		position:relative;
+		.ui-poptip-container{
+			background-color: @poptip-bg;
+			border: 1px solid @poptip-border;
+			.border-radius(2px);
+			float: left;
+			padding: 5px 22px 5px 10px;
+			position: relative;
+			.ui-poptip-arrow-left{
+				color:@poptip-border;
+			    left: -7px;
+				top: 5px;
+				position:absolute;
+				em,span{
+				    font-family: "SimSun";
+					font-size: 14px;
+					position: absolute;
+				}
+				em{
+				  left: -1px;
+				  top: 0;
+				}
+				span{
+					color: #FFFCEF;
+					left: 0;
+					top: 0;
+					z-index:@zindexTooltip;
+				}
+			}
+			.ui-poptip-arrow-top{
+				right:35px;
+				top:-9px;
+				*top:-7px;
+				left:auto;
+				em{
+					left:0;
+					top:-1px;
+				}
+			}
+			.ui-poptip-arrow-bottom{
+				left:auto;
+				right:35px;
+				top:auto;
+				bottom:9px;
+				*bottom:7px;
+				em{
+					left:0;
+					top:1px;
+				}
+			}
+			.ui-poptip-arrow-right{
+				right:6px;
+				top:5px;
+				left:auto;
+				em{
+					left:1px;
+					top:0;
+				}
+			}
+			.ui-poptip-txt{
+				font-size:12px;
+				font-family:@baseFontYahei;
+			}
+		}
+		.close{
+			position: absolute;
+			right: 5px;
+			top: 5px;
+		}
+	}
+	//自定义颜色的浮层
+	&.cus-poptip{
+		color:@black;
+		.ui-poptip-shadow{
+			background-color:  #ccc;
+			.ui-poptip-container{
+				border:1px solid @black;
+				background-color: @white;
+				.ui-poptip-arrow-left{
+					color:@black;
+				}
+			}
+			.close{
+				color: @black;
+			}
+		}
+	}
+}
+
+//
+// 关闭按钮
+// --------------------------------------------------
+a.close,button.close {
+	z-index:@zindexClose;
+	color: @poptip-color;
+	font-family: tahoma;
+	font-size: 14px;
+	height: 12px;
+	line-height: 10px;
+	overflow: hidden;
+	text-align: center;
+	width: 12px;
+	.transition( .3s ease 0s);			//延迟
+	&:hover{
+		.rotate(360deg);				//旋转
+		.opacity(80);
+		text-decoration: none;	
+	}
+}
+
+// 关闭 隐藏与显示
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.fade {
+  .opacity(0);
+  .transition(opacity .15s linear);
+  &.in {
+    .opacity(100);
+  }
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  overflow: visible \9;
+  .transition(height .35s ease);
+  &.in {
+    height: auto;
+  }
+}
+
+//tabs模块   经典样式
+.ui-tabs{
+	.tab-content{
+		border:1px solid @tabs-border;
+		border-top:none;
+		padding:5px;
+	}
+}
+//tabs模块 样式2
+.ui-pills{
+	.tab-content{
+		border-top:1px solid @tabs-border;
+	}
+}
+//tabs模块 自定颜色
+.ui-pills-tmp{
+	.nav-pills > .active > a, .nav-pills > .active > a:hover{
+		background-color:@black;
+	}
+}
+//tabs模块 下tab
+.tabs-below{
+	.tab-content{
+		border-top:1px solid @tabs-border;
+		border-bottom:none;
+	}
+}
+//tabs模块 左tab
+.tabs-left{
+	.tab-content{
+		float:left;
+		border-top:1px solid @tabs-border;
+		border-left:none;
+		margin-left:-2px;
+	}
+}
+//tabs模块 右tab
+.tabs-right{
+	.tab-content{
+		border-top:1px solid @tabs-border;
+		border-right:none;
+		float:right;
+		margin-right:-2px;
+	}
+}
+
+//自定义nav tabs
+.ui-tabs-cusnav{
+	.box-shadow(1px 2px 1px rgba(0, 0, 0, 0.25));      //设置外阴影
+	.navbar{
+		.navbar-inner{
+			border:1px solid @red;
+			#gradient>.vertical(#E61E17, #BF0600);
+		}
+		.nav > li > a{
+			color:#fff;
+			text-shadow:none;
+		}
+		.nav > .active > a, .nav > .active > a:hover, .nav > .active > a:focus{
+			background:#fff;
+			color:@black;
+		}
+	}
+	.tab-content{
+		border:1px solid @red;
+		border-top:none;
+	}
+}
+
+//自定义nav tabs
+.ui-tabs-cusnavA{
+	.navbar{
+		.navbar-inner{
+			border:1px solid #C64112;
+			#gradient>.vertical(#D04313, #DB4714);
+		}
+		.nav > li > a{
+			color:#fff;
+			text-shadow:none;
+		}
+		.nav > .active > a, .nav > .active > a:hover, .nav > .active > a:focus{
+			background:#fff;
+			color:#3d3d3d;
+		}
+	}
+	.tab-content{
+		border:1px solid #C64112;
+		border-top:none;
+	}
+}
+
+//dropdown-list
+.ui-dropdown{
+	background:none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+	_background:#fff;
+	border:1px solid #efefef;
+	font-size:14px;
+	padding:8px 0;
+	a{
+		display:block;
+		color:#333;
+	    height: 32px;
+		line-height: 32px;
+		padding: 0 32px 0 13px;
+		white-space: nowrap;
+		&:hover{
+			background: #17b3ee;
+			color: #fff;
+			text-decoration:none;
+		}
+	}
+}
+
+//placeholder模拟
+
+.placeholding-input{
+	display:block;
+	height:30px;
+	width:270px;
+	overflow: visible;
+    position: relative;
+	.ui-input{
+		width:266px;
+		height:20px;
+		&:focus+.placeholder{
+			.opacity(60);
+		}
+	}
+	.placeholder{
+		-moz-user-select: none;
+		position: absolute;
+		bottom: 1px;
+		right: 1px;
+		top: 1px;
+		left: 2px;
+		color: #999999;
+		cursor: text;
+		font-size: 13px;
+		height: 20px;
+		line-height: 20px;
+		padding: 4px;
+		.transition(opacity 0.1s ease 0s);			//显示
+		white-space: nowrap;
+		z-index: 1;
+	}
+	&.hasfoucs{
+		.placeholder{
+			font-size: 0 !important;
+			.opacity(0);
+			z-index: -1;
+		}
+	}
+}
+

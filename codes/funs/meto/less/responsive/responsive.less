@@ -1,0 +1,33 @@
+/*!
+ * 响应式布局base
+ *
+ */
+
+
+// 移动网页布局
+// -------------------------------------------------------------
+
+//引入框架变量与方法
+@import "variables.less"; 
+@import "mixins.less";
+
+
+// 移动版与网页版的隐藏显示
+// ------------------
+
+@import "responsive-utilities.less";
+@import "responsive-navbar.less";
+
+// 响应式布局
+// ------------------
+
+// 网页宽屏版
+@import "responsive-1200px-min.less";
+
+// ipad平板-旧式台式机
+@import "responsive-768px-979px.less";
+
+// 小屏手机版-大屏手机版
+@import "responsive-767px-max.less";
+
+

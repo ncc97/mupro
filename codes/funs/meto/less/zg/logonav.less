@@ -1,0 +1,155 @@
+.logoNav{
+	width:1000px;
+	margin:0 auto;
+	padding:10px 15px 0 15px;
+	.logo{
+		float:left;
+		height:94px;
+		position:relative;
+		.logo-sh,.logo-nj,.logo-wx{
+			background:url(../images/zg/logo/logo_sh.png) left top no-repeat;
+			display:block;
+			width:321px;
+			height:77px;
+			overflow:hidden;
+		}
+		.logo-nj{
+			background:url(../images/zg/logo/logo_nj.png) left top no-repeat;
+		}
+		.logo-wx{
+			background:url(../images/zg/logo/logo_wx.png) left top no-repeat;
+		}
+		.sub-station{
+			position:absolute;
+			left:140px;
+			top:17px;
+			font-weight:400;
+			h2{
+				display:block;
+				border:1px solid #cccccc;
+				font-size:22px;
+				font-family:"微软雅黑";
+				padding:1px 8px;
+				position:relative;
+				z-index:100;
+				font-weight:400;
+			}
+			.sub-line{
+				display:none;
+				height:1px;
+				width:50px;
+				position:absolute;
+				z-index:1000;
+				left:1px;
+				top:33px;
+				background:#ffffff;
+				width:82px;
+			}
+			.sub-cats{
+				display:none;
+				position:absolute;
+				left:0px;
+				top:33px;
+				padding:10px 0;
+				border:1px solid #cccccc;
+				background:#ffffff;
+				width:140px;
+				.box-shadow(2px 2px 1px rgba(0, 0, 0, 0.25));
+				li{
+					float:left;
+					display:inline;
+					padding:0 10px 0 5px;
+					height:14px;
+					line-height:14px;
+					font-size:14px;
+					border-right:1px solid #cccccc;
+					a{
+						&:hover{
+							text-decoration:none;
+						}
+						&.active{
+							color:#ff6600;
+							
+						}
+					}
+					&.no-border{
+						border-right:none;
+					}
+				}
+			}
+		}
+		.hover{
+			.sub-line{
+				display:block;
+			}
+			.sub-cats{
+				display:block;
+			}
+		}		
+	}
+	.top-Search{
+		float:right;
+		.ul-list{
+			margin-top:15px;
+			margin-bottom:5px;
+			li{
+				float:left;
+				padding:0 10px;
+				height:14px;
+				line-height:14px;
+				border-right:1px solid #cccccc;
+				a{
+					color:#3d3d3d;
+				}
+				&.active{
+					a{
+						color:#ff7700;
+						font-weight:bold;
+					}
+				}
+				&.no-border{
+					border-right:none;
+				}
+			}
+		}
+		.s-tool{
+			width:550px;
+			.form-wrapper{
+				float:left;
+				width:400px;
+				.ui-searchA{
+					position:relative;
+					input{
+						padding:4px 30px;
+						width:240px;
+					}
+					button{
+						height: 28px;
+						width:85px;
+						text-indent:3px;
+					}
+					.ui-sea{
+						position:absolute;
+						left:7px;
+						top:4px;
+						color:#ff6600;
+						font-size:18px;
+						line-height:18px;
+					}
+					.ui-clear{
+						position:absolute;
+						font-size:18px;
+						right:90px;
+						top:4px;
+						color:#ff6600;
+						cursor:pointer;
+						line-height:18px;
+					}
+				}
+			}
+			.phone-mg{
+				float:right;
+			}
+		}
+	}
+}

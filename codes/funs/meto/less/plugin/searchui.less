@@ -1,0 +1,105 @@
+//搜索input交互UI
+//元素使用浮动。需要布局支持
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {-webkit-transform:rotate(360deg);}
+}
+
+.ui-search{
+	font-family:@baseFontYahei;
+	position:relative;
+	float:left;
+	label{
+		width:206px;
+		border:1px solid transparent;
+			&.label-mini       { width: 60px; }
+			&.label-small      { width: 90px; }
+			&.label-medium     { width: 150px; }
+			&.label-large      { width: 210px; }
+			&.label-xlarge     { width: 270px; }
+			&.label-xxlarge    { width: 530px; }
+	}
+	input{
+		font-family:@baseFontYahei;
+	}
+	.ui-label{
+		position:absolute;
+		left:0px;
+		top:0px;
+		color:#cccccc;
+		padding:4px 6px;
+		height:18px;
+		line-height:18px;
+	}
+	.ui-label-hide{
+		display:none;
+		z-index:-1;
+	}
+	.ui-clear,.ui-load{
+		display:none;
+		position:absolute;
+		right:6px;
+		top:5px;
+		color:#d2d1d1;
+		cursor:pointer;
+		&:hover{
+			color:#ff6600;
+		}
+	}
+}
+
+.form-wrapper {
+    width: 456px;
+	.ui-searchA{
+		border:3px solid #ff7700;
+	}
+}
+.form-wrapper input {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 0 none;
+    float: left;
+    font-family: @baseFontYahei;
+    height: 20px;
+    padding: 6px 5px;
+    width: 330px;
+	font-size:14px;
+}
+.form-wrapper input:focus {
+    background: none repeat scroll 0 0 #FFFFFF;
+    outline: 0 none;
+}
+.form-wrapper input:-moz-placeholder {
+    color: #999999;
+    font-style: italic;
+    font-weight: normal;
+}
+.form-wrapper button {
+    background: none repeat scroll 0 0 #ff7700;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    font-family: @baseFontYahei;
+    height: 32px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    width: 110px;
+	font-weight:lighter;
+	font-size:18px;
+}
+.form-wrapper button:hover {
+    background: none repeat scroll 0 0 #ff6600;
+}
+.form-wrapper button:active, .form-wrapper button:focus {
+    background: none repeat scroll 0 0 #ff6600;
+}
+
+.form-wrapper button::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+			
+

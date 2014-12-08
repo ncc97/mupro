@@ -1,0 +1,119 @@
+// meto风格导航
+.ui-metoMenu{
+	.menu{
+		li{
+			float:left;
+			font-size:14px;
+			color:#ffffff;
+			position:relative;
+			a{
+				background:#379BE9;
+				color:#ffffff;
+				padding:4px 8px;
+				text-align:center;
+				.transition( .3s ease 0s);		
+				float:left;
+				height:22px;
+				line-height:22px;
+				i{
+					.transition( .3s ease 0s);		
+					display:inline-block;
+					margin-left:5px;
+					font-size:10px;
+				}
+				&:hover{
+					background:#1669ab;
+					text-decoration:none;
+				}
+			}
+			.nav-menu{
+				background: #379BE9;
+				display: none;
+				position: absolute;
+				text-align: left;
+				top: 30px;
+				width:59px;
+				z-index:100;
+				a{
+					display:block;
+					float:none;
+				}
+			}
+			&.hover{
+				.nav-menu{
+					display:block;
+				}
+				a{
+					i{
+						.rotate(180deg);
+						transform-origin:50% 40% 0;
+						moz-transform-origin:50% 40% 0;
+						webkit-transform-origin:50% 40% 0;
+						o-transform-origin:50% 40% 0;
+					}
+				}
+			}
+		}
+	}
+	.tool-icos{
+		a{
+			float:left;
+			background:#379BE9;
+			color:#ffffff;
+			padding:4px 8px;
+			text-align:center;
+			.transition( .3s ease 0s);	
+			height:22px;
+			line-height:22px;
+			&:hover{
+				background:#1669ab;
+				text-decoration:none;
+				.scale(1.1);
+			}
+		}
+	}
+}
+
+// 多色
+.ui-metoMenuA{
+	.menu{
+		li{
+			a{
+				background:#CE0303;
+				&:hover{
+					background:#8B0000;
+				}
+			}
+		}
+	}
+	.tool-icos{
+		a{
+			background:#CE0303;
+			&:hover{
+				background:#8B0000;
+			}
+		}
+	}
+}
+
+//多色
+.ui-metoMenuB{
+	.menu{
+		li{
+			a{
+				background:#66CC66;
+				&:hover{
+					background:#1A401A;
+				}
+			}
+		}
+	}
+	.tool-icos{
+		a{
+			background:#66CC66;
+			&:hover{
+				background:#1A401A;
+			}
+		}
+	}
+}

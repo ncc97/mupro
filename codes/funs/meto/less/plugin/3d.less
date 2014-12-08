@@ -1,0 +1,35 @@
+//css3.0特效
+.3d(@duration: 1s, @timing: ease, @fill:both ){
+	webkit-animation-duration: @duration;
+	-webkit-animation-timing-function: @timing;
+	-webkit-animation-fill-mode: @fill;
+	-moz-animation-duration: @duration;
+	-moz-animation-timing-function: @timing;
+	-moz-animation-fill-mode: @fill;
+	-ms-animation-duration: @duration;
+	-ms-animation-timing-function: @timing;
+	-ms-animation-fill-mode: @fill;
+	animation-duration: @duration;
+	animation-timing-function: @timing;
+	animation-fill-mode: @fill;	
+}
+.3d-time(@duration: 1s){
+	-webkit-animation-duration: @duration;
+	-moz-animation-duration: @duration;
+	-o-animation-duration: @duration;
+	animation-duration: @duration;
+}
+
+.3d-name(@name: flash){
+	-webkit-animation-name: @name;
+	-moz-animation-name: @name;
+	-o-animation-name: @name;
+	animation-name: @name;
+}
+
+.ui-3d {
+	.3d();	
+	&.hinge{
+		.3d-time(2s);
+	}	
+}

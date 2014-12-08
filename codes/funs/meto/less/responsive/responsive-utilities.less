@@ -1,0 +1,49 @@
+//
+// 设置移动浏览器与桌面浏览器的隐藏显示
+// --------------------------------------------------
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+// Visibility utilities
+
+// 桌面版
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+.visible-desktop   { display: inherit !important; }
+
+// 小屏版
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important ; }
+  // Show
+  .visible-tablet    { display: inherit !important; }
+  // Hide
+  .hidden-tablet     { display: none !important; }
+}
+
+// 手机版
+@media (max-width: 767px) {
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  // Show
+  .visible-phone     { display: inherit !important; } 
+  // Hide
+  .hidden-phone      { display: none !important; }
+}
+
+// 480手机版
+@media (max-width: 480px) {
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  // Show
+  .visible-phone     { display: inherit !important; } 
+  // Hide
+  .hidden-phone      { display: none !important; }
+}
+

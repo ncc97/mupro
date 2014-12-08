@@ -1,0 +1,27 @@
+.ui-newsList {
+  border: 1px solid #dcdcdc;
+}
+.ui-newsList .hd {
+  padding: 5px 10px;
+  background: #ffffff;
+  position: relative;
+}
+.ui-newsList .hd h2 {
+  font-size: 14px;
+}
+.ui-newsList .hd .more {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.ui-newsList .bd {
+  padding: 0 10px 10px;
+  color: #3d3d3d;
+}
+.ui-newsList .bd li {
+  height: 26px;
+  line-height: 26px;
+}
+.ui-newsList .bd li a {
+  padding-left: 5px;
+}

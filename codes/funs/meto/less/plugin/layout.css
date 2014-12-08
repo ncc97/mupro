@@ -1,0 +1,41 @@
+.ui-layout .hd {
+  background: #999999;
+  height: 60px;
+  text-align: center;
+  color: #eeeeee;
+}
+.ui-layout .bd {
+  overflow: hidden;
+}
+.ui-layout .bd .main,
+.ui-layout .bd .left,
+.ui-layout .bd .right {
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
+}
+.ui-layout .bd .main {
+  float: left;
+  width: 100%;
+  background: #ffffff;
+}
+.ui-layout .bd .left {
+  float: left;
+  width: 190px;
+  margin-left: -100%;
+  background: #E79F6D;
+}
+.ui-layout .bd .right {
+  float: left;
+  width: 230px;
+  margin-left: -230px;
+  background: #77BBDD;
+}
+.ui-layout .bd .in {
+  margin: 0 230px 0 190px;
+}
+.ui-layout .fd {
+  background: #999999;
+  height: 60px;
+  text-align: center;
+  color: #eeeeee;
+}
