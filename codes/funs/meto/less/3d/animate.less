@@ -19,6 +19,56 @@ body {
 	        animation-duration: 2s;
 }
 
+
+//动画方法
+#animate {
+  .all(@duration: 1, @fill-mode: both, @delay: 0,@alter: nomal,@timing: linear,@iteration: 1,@animation) {
+    /*动画时间*/
+    -webkit-animation-duration: @duration;
+    -moz-animation-duration: @duration;
+    -o-animation-duration: @duration;
+    animation-duration: @duration;
+    /*对象状态(none,forwards,backwards,both)*/
+    -webkit-animation-fill-mode: @fill-mode;
+    -moz-animation-fill-mode: @fill-mode;
+    -o-animation-fill-mode: @fill-mode;
+    animation-fill-mode: @fill-mode;
+    /*延时动画时间*/
+    -webkit-animation-delay: @delay;
+    -moz-animation-delay: @delay;
+    -o-animation-delay: @delay;
+    animation-delay: @delay;
+    /*轮流反向播放（normal|alternate）*/
+    -webkit-animation-direction:@alter;
+    -moz-animation-direction:@alter;
+    -o-animation-direction:@alter;
+    animation-direction:@alter;
+    /*动画曲线(linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n)|)*/
+    -webkit-animation-timing-function:@timing;
+    -moz-animation-timing-function:@timing;
+    -o-animation-timing-function:@timing;
+    animation-timing-function:@timing;
+    /*播放次数(1|N|infinite)*/
+    -webkit-animation-iteration-count:@iteration;
+    -moz-animation-iteration-count:@iteration;
+    -o-animation-iteration-count:@iteration;
+    animation-iteration-count:@iteration;
+    /*动画名字*/
+    -webkit-animation-name: @animation;
+    -moz-animation-name: @animation;
+    -o-animation-name: @animation;
+    animation-name: @animation;
+  }
+}
+
+//#delay>.animate(1,both,0,nomal,linear,1,fadeIn);
+
+.mm1{
+  #animate>.all(1,both,0,nomal,linear,1,fadeIn);
+}
+
+
+
 @-webkit-keyframes flash {
 	0%, 50%, 100% {opacity: 1;}
 	25%, 75% {opacity: 0;}

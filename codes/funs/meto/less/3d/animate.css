@@ -17,6 +17,43 @@ body {
   -o-animation-duration: 2s;
   animation-duration: 2s;
 }
+.mm1 {
+  /*动画时间*/
+  -webkit-animation-duration: 1;
+  -moz-animation-duration: 1;
+  -o-animation-duration: 1;
+  animation-duration: 1;
+  /*对象状态(none,forwards,backwards,both)*/
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /*延时动画时间*/
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+  /*轮流反向播放（normal|alternate）*/
+  -webkit-animation-direction: nomal;
+  -moz-animation-direction: nomal;
+  -o-animation-direction: nomal;
+  animation-direction: nomal;
+  /*动画曲线(linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n)|)*/
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  /*播放次数(1|N|infinite)*/
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  /*动画名字*/
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 @-webkit-keyframes flash {
   0%,
   50%,
